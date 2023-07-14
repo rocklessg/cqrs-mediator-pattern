@@ -32,7 +32,6 @@ namespace CqrsMediatRPattern.API.Repositories.Implementations
 
         public async Task<List<Student>> GetStudentListAsync() => await _dbContext.Students.ToListAsync();
 
-
         public async Task<int> UpdateStudentAsync(Student studentDetails)
         {
             _dbContext.Students.Update(studentDetails);
