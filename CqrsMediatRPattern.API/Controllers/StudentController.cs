@@ -25,7 +25,6 @@ namespace CqrsMediatRPattern.API.Controllers
         }
 
         [HttpGet("get-student/id")]
-       // [Route("id")]
         public async Task<Student> GetStudentByIdAsync(int studentId)
         {
             var student = await _mediator.Send(new GetStudentByIdQuery() { Id = studentId });
